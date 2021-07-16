@@ -6,11 +6,11 @@ class Solution:
         for log in logs:
             parsed = log.split()
             # 숫자 로그라면
-            if parsed[1].isdecimal():
+            if parsed[1].isdigit():
                 digit_logs.append(log)
             else: # 문자 로그라면
                 letter_logs.append(log)
                 
-        letters = sorted(letter_logs, key=lambda x : (x.split()[1:], x.split()[0]))
+        sorted_letters = sorted(letter_logs, key=lambda x : (x.split()[1:], x.split()[0]))
         
-        return letters + digit_logs
+        return sorted_letters + digit_logs
