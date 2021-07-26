@@ -6,3 +6,11 @@
 
 https://leetcode.com/
 
+
+
+## array
+
+| number | title   | solution | difficulty |
+| ------ | ------- | -------- | ---------- |
+| 1      | Two Sum |          | Easy       |
+
