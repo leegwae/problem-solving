@@ -73,8 +73,6 @@ class Solution:
                     left += 1
                     right -= 1
 
-        results.sort()
-
         return results
 
 
