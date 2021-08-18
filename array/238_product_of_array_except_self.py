@@ -47,7 +47,7 @@ class Solution:
         size = len(nums)
         for i in range(0, size):
             output.append(p)
-            p *= nums[i]    
+            p *= nums[i]
 
         p = 1
         for i in range(size - 1, -1, -1):
