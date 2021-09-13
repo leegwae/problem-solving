@@ -1,7 +1,7 @@
-# Definition for singly-linked list.
 import collections
+from typing import Deque
 
-
+# Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -43,24 +43,39 @@ class Solution:
     #     return True
 
     # using deque
+    # def isPalindrome(self, head: ListNode) -> bool:
+    #     if not head:
+    #         return False
+    #
+    #     dq: Deque = collections.deque()
+    #     node = head
+    #     while node is not None:
+    #         dq.append(node.val)
+    #         node = node.next
+    #
+    #     while len(dq) > 1:
+    #         if not dq.popleft() == dq.pop():
+    #             return False
+    #
+    #     return True
+
+    # using runner
     def isPalindrome(self, head: ListNode) -> bool:
-        if not head:
-            return False
+        fast = slow = head
+        rev = None
 
-        l = collections.deque()
-        node = head
-        while node is not None:
-            l.append(node.val)
-            node = node.next
+        while fast and fast.next:
+            fast = fast.next.next
+            rev, rev.next, slow = slow, rev, slow.next
 
-        while len(l) > 1:
-            if not l.popleft() == l.pop():
-                return False
+        if fast:
+            slow = slow.next
 
-        return True
-
+        while rev and rev.val == slow.val:
+            slow, rev = slow.next, rev.next
+        return not rev
 
 if __name__ == "__main__":
     s = Solution()
-    head = [1,2,2,1]
+    head = [1, 2, 2, 1]
     print(s.isPalindrome(head))

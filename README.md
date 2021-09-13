@@ -4,7 +4,8 @@
 
 
 
-https://leetcode.com/
+- 파이썬 알고리즘 인터뷰(박상길 저)
+- https://leetcode.com/
 
 
 
@@ -18,4 +19,12 @@ https://leetcode.com/
 | 121    | Best Time to Buy and Sell Stock | [Python](https://github.com/leegwae/algorithms/blob/main/array/121_best_time_to_but_and_sell_stock.py) | Easy       |
 | 238    | product of array except self    | [Python](https://github.com/leegwae/algorithms/blob/main/array/238_product_of_array_except_self.py) | Medium     |
 | 561    | Array Partition I               | [Python](https://github.com/leegwae/algorithms/blob/main/array/561_array_partition_i.py) | Easy       |
+
+
+
+## linked list
+
+| number | title                  | solution                                                     | difficulty |
+| ------ | ---------------------- | ------------------------------------------------------------ | ---------- |
+| 234    | Palindrome Linked List | [Python](https://github.com/leegwae/algorithms/blob/main/linked_list/234_palindrome_linked_list.py) | Easy       |
 
