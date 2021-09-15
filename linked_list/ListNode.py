@@ -25,13 +25,17 @@ def createLinkedList(l: List[T]):
 
     return head
 
+
 def printNodes(head: ListNode):
     if not head:
         print('리스트에 노드가 없습니다.')
 
+    print('[', end=' ')
     while head:
-        print(head.val)
+        print(f'{head.val}', end=', ')
         head = head.next
+    print(']')
+
 
 def toList(head: Optional[ListNode]):
     l = []
@@ -41,7 +45,3 @@ def toList(head: Optional[ListNode]):
         head = head.next
 
     return l
-
-if __name__ == '__main__':
-    head = createLinkedList(['a', 1, 3])
-    printNodes(head)
