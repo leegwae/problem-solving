@@ -33,3 +33,11 @@
 | 024    | Swap Nodes in Pairs    | [Python](https://github.com/leegwae/algorithms/blob/main/linked_list/024_swap_nodes_in_pairs.py) | Medium     |
 | 092    | Reverse Linked List II | [Python](https://github.com/leegwae/algorithms/blob/main/linked_list/092_reverse_linked_list_ii.py) | Medium     |
 
+
+
+## stack
+
+| number | title             | solution                                                     | difficulty |
+| ------ | ----------------- | ------------------------------------------------------------ | ---------- |
+| 020    | Valid Parentheses | [Python](https://github.com/leegwae/algorithms/blob/main/linked_list/20_valid_parentheses.py) | Easy       |
+
