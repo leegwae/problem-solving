@@ -11,30 +11,23 @@ T = TypeVar('T')
 
 
 def createLinkedList(l: List[T]):
-    if not l:
-        return None
+    root = node = ListNode()
 
-    head = ListNode()
-    # 순회용 노드
-    temp = head
-    for i, n in enumerate(l):
-        temp.val = n
-        if i != len(l) - 1:
-            temp.next = ListNode()
-            temp = temp.next
+    for n in l:
+        node.next = ListNode(n)
+        node = node.next
 
-    return head
+    return root.next
 
 
 def printNodes(head: ListNode):
     if not head:
         print('리스트에 노드가 없습니다.')
 
-    print('[', end=' ')
     while head:
-        print(f'{head.val}', end=', ')
+        print(f'{head.val}', end='->')
         head = head.next
-    print(']')
+    print('NULL')
 
 
 def toList(head: Optional[ListNode]):

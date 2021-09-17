@@ -24,11 +24,12 @@
 
 ## linked list
 
-| number | title                   | solution                                                     | difficulty |
-| ------ | ----------------------- | ------------------------------------------------------------ | ---------- |
-| 234    | Palindrome Linked List  | [Python](https://github.com/leegwae/algorithms/blob/main/linked_list/234_palindrome_linked_list.py) | Easy       |
-| 206    | Reverse Linked List     | [Python](https://github.com/leegwae/algorithms/blob/main/linked_list/206_reverse_linked_list.py) | Easy       |
-| 002    | Add Two Numbers         | [Python](https://github.com/leegwae/algorithms/blob/main/linked_list/206_reverse_linked_list.py) | Medium     |
-| 328    | Odd Even Linked List    | [Python](https://github.com/leegwae/algorithms/blob/main/linked_list/328_odd_even_linked_list.py) | Medium     |
-| 024    | 24. Swap Nodes in Pairs | [Python](https://github.com/leegwae/algorithms/blob/main/linked_list/024_swap_nodes_in_pairs.py) | Medium     |
+| number | title                  | solution                                                     | difficulty |
+| ------ | ---------------------- | ------------------------------------------------------------ | ---------- |
+| 234    | Palindrome Linked List | [Python](https://github.com/leegwae/algorithms/blob/main/linked_list/234_palindrome_linked_list.py) | Easy       |
+| 206    | Reverse Linked List    | [Python](https://github.com/leegwae/algorithms/blob/main/linked_list/206_reverse_linked_list.py) | Easy       |
+| 002    | Add Two Numbers        | [Python](https://github.com/leegwae/algorithms/blob/main/linked_list/206_reverse_linked_list.py) | Medium     |
+| 328    | Odd Even Linked List   | [Python](https://github.com/leegwae/algorithms/blob/main/linked_list/328_odd_even_linked_list.py) | Medium     |
+| 024    | Swap Nodes in Pairs    | [Python](https://github.com/leegwae/algorithms/blob/main/linked_list/024_swap_nodes_in_pairs.py) | Medium     |
+| 092    | Reverse Linked List II | [Python](https://github.com/leegwae/algorithms/blob/main/linked_list/092_reverse_linked_list_ii.py) | Medium     |
 
