@@ -37,8 +37,9 @@
 
 ## stack
 
-| number | title              | solution                                                     | difficulty |
-| ------ | ------------------ | ------------------------------------------------------------ | ---------- |
-| 020    | Valid Parentheses  | [Python](https://github.com/leegwae/algorithms/blob/main/stack/20_valid_parentheses.py) | Easy       |
-| 739    | Daily Temperatures | [Python](https://github.com/leegwae/algorithms/blob/main/stack/739_daily_temperatures.py) | Medium     |
+| number | title                        | solution                                                     | difficulty |
+| ------ | ---------------------------- | ------------------------------------------------------------ | ---------- |
+| 020    | Valid Parentheses            | [Python](https://github.com/leegwae/algorithms/blob/main/stack/20_valid_parentheses.py) | Easy       |
+| 739    | Daily Temperatures           | [Python](https://github.com/leegwae/algorithms/blob/main/stack/739_daily_temperatures.py) | Medium     |
+| 225    | Implement Stack using Queues | [Python](https://github.com/leegwae/algorithms/blob/main/stack/225_implement_stack_using_queues.py) | Easy       |
 
