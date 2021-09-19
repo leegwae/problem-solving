@@ -44,3 +44,11 @@
 | 225    | Implement Stack using Queues | [Python](https://github.com/leegwae/algorithms/blob/main/stack/225_implement_stack_using_queues.py) | Easy       |
 | 232    | Implement Queue using Stacks | [Python](https://github.com/leegwae/algorithms/blob/main/stack/232_implement_queue_using_stacks.py) | Easy       |
 
+
+
+## queue
+
+| number | title                 | solution                                                     | difficulty |
+| ------ | --------------------- | ------------------------------------------------------------ | ---------- |
+| 622    | Design Circular Queue | [Python](https://github.com/leegwae/algorithms/blob/main/stack/622_design_circular_queue.py) | Medium     |
+
