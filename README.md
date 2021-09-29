@@ -68,3 +68,11 @@
 | ------ | -------------- | ------------------------------------------------------------ | ---------- |
 | 706    | Design HashMap | [Python](https://github.com/leegwae/algorithms/blob/main/hashmap/706_design_hashmap.py) | Easy       |
 
+
+
+## etc
+
+| number | title             | solution                                                     | difficulty |
+| ------ | ----------------- | ------------------------------------------------------------ | ---------- |
+| 771    | Jewels and Stones | [Python](https://github.com/leegwae/algorithms/blob/main/etc/771_jewels_and_stones.py) | Easy       |
+
