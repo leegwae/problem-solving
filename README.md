@@ -66,5 +66,5 @@
 
 | number | title          | solution                                                     | difficulty |
 | ------ | -------------- | ------------------------------------------------------------ | ---------- |
-| 706    | Design HashMap | [Python](https://github.com/leegwae/algorithms/blob/main/hash/706_design_hashmap.py) | Easy       |
+| 706    | Design HashMap | [Python](https://github.com/leegwae/algorithms/blob/main/hashmap/706_design_hashmap.py) | Easy       |
 
