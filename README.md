@@ -50,7 +50,7 @@
 
 | number | title                 | solution                                                     | difficulty |
 | ------ | --------------------- | ------------------------------------------------------------ | ---------- |
-| 622    | Design Circular Queue | [Python](https://github.com/leegwae/algorithms/blob/main/stack/622_design_circular_queue.py) | Medium     |
+| 622    | Design Circular Queue | [Python](https://github.com/leegwae/algorithms/blob/main/queue/622_design_circular_queue.py) | Medium     |
 
 
 
@@ -58,5 +58,13 @@
 
 | number | title                 | solution                                                     | difficulty |
 | ------ | --------------------- | ------------------------------------------------------------ | ---------- |
-| 641    | Design Circular Deque | [Python](https://github.com/leegwae/algorithms/blob/main/stack/641_design_circular_deque.py) | Medium     |
+| 641    | Design Circular Deque | [Python](https://github.com/leegwae/algorithms/blob/main/deque/641_design_circular_deque.py) | Medium     |
+
+
+
+## hash
+
+| number | title          | solution                                                     | difficulty |
+| ------ | -------------- | ------------------------------------------------------------ | ---------- |
+| 706    | Design HashMap | [Python](https://github.com/leegwae/algorithms/blob/main/hash/706_design_hashmap.py) | Easy       |
 
