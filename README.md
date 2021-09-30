@@ -68,6 +68,7 @@
 | ------ | ---------------------------------------------- | ------------------------------------------------------------ | ---------- |
 | 706    | Design HashMap                                 | [Python](https://github.com/leegwae/algorithms/blob/main/hashmap/706_design_hashmap.py) | Easy       |
 | 003    | Longest Substring Without Repeating Characters | [Python](https://github.com/leegwae/algorithms/blob/main/hashmap/003_longest_substring_without_repeating_characters.py) | Medium     |
+| 347    | Top K Frequent Elements                        | [Python](https://github.com/leegwae/algorithms/blob/main/hashmap/347_top_k_frequent_elements.py) | Medium     |
 
 
 
