@@ -33,7 +33,7 @@ class Solution:
     #
     #     return root.next
 
-    # using iteration
+    # # using iteration
     # def reverseBetween(self, head: Optional[ListNode], left: int, right: int) -> Optional[ListNode]:
     #     if not head or left == right:
     #         return head
@@ -45,10 +45,41 @@ class Solution:
     #     start = prev.next
     #
     #     for _ in range(right - left):
-    #         temp, prev.next, start.next, = prev.next, start.next, start.next.next
+    #         temp = prev.next
+    #         prev.next = start.next
+    #         print(temp.val, prev.next.val)
+    #         start.next = start.next.next
     #         prev.next.next = temp
     #
     #     return root.next
+
+    def reverseBetween(self, head: Optional[ListNode], left: int, right: int):
+        if not head:
+            return None
+        cur, prev = head, None
+
+        for _ in range(1, left):
+            prev = cur
+            cur = cur.next
+
+        # con: left 위치의 이전 노드
+        # cur: left 위치의 노드
+        con, tail = prev, cur
+
+        for _ in range(right - (left - 1)):
+            tmp = cur.next
+            cur.next = prev
+            prev = cur
+            cur = tmp
+
+        if con:
+            con.next = prev
+        else:
+            head = prev
+
+        tail.next = cur
+
+        return head
 
 if __name__ == '__main__':
     s = Solution()
