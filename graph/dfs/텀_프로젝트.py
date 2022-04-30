@@ -14,7 +14,7 @@ def dfs(v):
 		dfs(w)
 	else:
 		if w in cycle:
-			count += len(cycle[cycle.index(w):])
+			count += cycle.index(v) - cycle.index(w) + 1
 			return
 
 
