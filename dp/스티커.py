@@ -4,23 +4,18 @@ input = sys.stdin.readline
 sys.setrecursionlimit(1000000)
 
 
-def f(x, y):
-	if x == n:
+def f(col, prev):
+	if col == n:
 		return 0
-	if dp[x][y] != - 1:
-		return dp[x][y]
+	if dp[col][prev] != - 1:
+		return dp[col][prev]
 
-	result = f(x + 1, -1)
-	# [0][x-1]의 스티커를 떼지 않았다면
-	if y != 0:
-		# [0][x]의 스티커를 뗀다.
-		result = max(result, f(x + 1, 0) + s[0][x])
-	# [1][x-1]의 스티커를 떼지 않았다면
-	if y != 1:
-		# [1][x]의 스티커를 뗀다.
-		result = max(result, f(x + 1, 1) + s[1][x])
-
-	dp[x][y] = result
+	result = f(col + 1, -1)
+	if prev != 0:
+		result = max(result, f(col + 1, 0) + s[0][col])
+	if prev != 1:
+		result = max(result, f(col + 1, 1) + s[1][col])
+	dp[col][prev] = result
 
 	return result
 
