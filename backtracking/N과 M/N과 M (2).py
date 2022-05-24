@@ -1,18 +1,19 @@
+# 조합
 import sys
 
 input = sys.stdin.readline
 
 
-def dfs(cur, prev):
-	if len(prev) == M:
-		print(*prev, sep=" ")
+def dfs(cur, visited):
+	if len(visited) == M:
+		print(*visited, sep=" ")
 		return
 
 	if cur > N:
 		return
 
-	dfs(cur + 1, [*prev, cur])
-	dfs(cur + 1, [*prev])
+	dfs(cur + 1, [*visited, cur])
+	dfs(cur + 1, [*visited])
 
 
 if __name__ == '__main__':

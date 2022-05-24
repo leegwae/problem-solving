@@ -1,3 +1,4 @@
+# 중복조합
 import sys
 
 input = sys.stdin.readline
@@ -8,8 +9,11 @@ def dfs(cur, visited):
 		print(*visited, sep=' ')
 		return
 
-	for nxt in range(cur, N + 1):
-		dfs(nxt, [*visited, nxt])
+	if cur > N:
+		return
+
+	dfs(cur, [*visited, cur])
+	dfs(cur + 1, [*visited])
 
 
 if __name__ == '__main__':

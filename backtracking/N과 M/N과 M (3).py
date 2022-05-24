@@ -1,3 +1,4 @@
+# 중복 순열
 import sys
 
 input = sys.stdin.readline
