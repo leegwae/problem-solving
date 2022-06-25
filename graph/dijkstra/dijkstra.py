@@ -1,9 +1,10 @@
 import sys
+from typing import List
 
 INF = sys.maxsize
 
 
-def dijkstra(start):
+def dijkstra(start: int) -> List[int]:
 	visited = [0] * N
 	distances = [INF] * N
 
