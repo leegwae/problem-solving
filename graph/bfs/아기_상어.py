@@ -1,5 +1,5 @@
 import sys
-from typing import List
+from typing import List, Tuple
 from collections import deque
 
 input = sys.stdin.readline
@@ -9,7 +9,7 @@ dy = [-1, 1, 0, 0]
 dx = [0, 0, -1, 1]
 
 
-def bfs(y: int, x: int) -> (int, List[int]):
+def bfs(y: int, x: int, size: int) -> (int, List[Tuple[int, int]]):
 	distance = [[-1] * N for _ in range(N)]
 	queue = deque([(y, x)])
 	distance[y][x] = 0
@@ -28,6 +28,7 @@ def bfs(y: int, x: int) -> (int, List[int]):
 					if graph[ny][nx] <= size:
 						distance[ny][nx] = distance[cy][cx] + 1
 						queue.append((ny, nx))
+
 						if 0 < graph[ny][nx] < size:
 							if distance[ny][nx] < min_distance:
 								min_distance = distance[ny][nx]
@@ -38,41 +39,50 @@ def bfs(y: int, x: int) -> (int, List[int]):
 	return min_distance, min_position
 
 
+def get_time() -> int:
+	global shark_pos, fish_cnt
+
+	shark_size = 2
+	shark_ate = 0
+	time = 0
+
+	while fish_cnt:
+		m_distance, m_position = bfs(*shark_pos, shark_size)
+
+		if not m_position:
+			break
+
+		m_position.sort()
+
+		time += m_distance
+		shark_pos = m_position[0]
+		shark_ate += 1
+		fish_cnt -= 1
+		graph[shark_pos[0]][shark_pos[1]] = 0
+
+		if shark_ate == shark_size:
+			shark_size += 1
+			shark_ate = 0
+
+	return time
+
+
 if __name__ == '__main__':
 	N = int(input())
-	pos = (-1, -1)
-	size = 2
-	fish = 0
+	shark_pos = (-1, -1)
+	fish_cnt = 0
+
 	graph = []
 	for i in range(N):
 		l = list(map(int, input().split()))
 		for j in range(N):
 			if l[j] != 0:
 				if l[j] == 9:
-					pos = (i, j)
+					shark_pos = (i, j)
 					l[j] = 0
 				else:
-					fish += 1
+					fish_cnt += 1
 		graph.append(l)
 
-	ate = 0
-	answer = 0
-	while fish:
-		m_distance, m_position = bfs(*pos)
-
-		if not m_position:
-			break
-
-		m_position.sort()
-		pos = m_position[0]
-		answer += m_distance
-
-		ny, nx = pos
-		ate += 1
-		fish -= 1
-		graph[ny][nx] = 0
-
-		if ate == size:
-			size += 1
-			ate = 0
+	answer = get_time()
 	print(answer)
