@@ -17,11 +17,8 @@ def topological_sort() -> Optional[List[int]]:
 		result.append(cur)
 		for nxt in graph[cur]:
 			in_degree[nxt] -= 1
-
 			if in_degree[nxt] == 0:
 				queue.append(nxt)
-			elif in_degree[nxt] < 0:
-				return None
 
 	return result if len(result) == N else None
 
