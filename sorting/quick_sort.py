@@ -1,21 +1,37 @@
+# def partition(left, right):
+# 	pivot = arr[right]
+# 	pos = left
+# 	for i in range(left, right):
+# 		if arr[i] <= pivot:
+# 			arr[pos], arr[i] = arr[i], arr[pos]
+# 			pos = pos + 1
+#
+# 	arr[pos], arr[right] = arr[right], arr[pos]
+# 	return pos
+
 def partition(left, right):
-	pivot = arr[right]
-	i = left - 1
-	for j in range(left, right):
-		if arr[j] <= pivot:
-			i = i + 1
-			arr[i], arr[j] = arr[j], arr[i]
+	low = left + 1
+	high = right
+	pivot = arr[left]
 
-	arr[i + 1], arr[right] = arr[right], arr[i + 1]
+	while low <= high:
+		while low <= right and arr[low] <= pivot:
+			low += 1
+		while high >= low and arr[high] > pivot:
+			high -= 1
 
-	return i + 1
+		if low <= high:
+			arr[low], arr[high] = arr[high], arr[low]
+
+	arr[left], arr[high] = arr[high], arr[left]
+	return high
 
 
 def quick_sort(left, right):
 	if left < right:
-		pivot = partition(left, right)
-		quick_sort(left, pivot - 1)
-		quick_sort(pivot + 1, right)
+		pivot_idx = partition(left, right)
+		quick_sort(left, pivot_idx - 1)
+		quick_sort(pivot_idx + 1, right)
 
 
 if __name__ == '__main__':
