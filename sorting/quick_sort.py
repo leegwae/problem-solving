@@ -17,7 +17,7 @@ def partition(left, right):
 	while low <= high:
 		while low <= right and arr[low] <= pivot:
 			low += 1
-		while high >= low and arr[high] > pivot:
+		while high >= left and arr[high] > pivot:
 			high -= 1
 
 		if low <= high:
